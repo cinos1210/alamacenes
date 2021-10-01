@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block title %}PATIENTS{% endblock %}{% block content %}
+<form method="POST">
+    <h3 align="center">Register Patient</h3>
+    <div class="form-group">
+      <label for="Name">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Name"
+        name="Name"
+        placeholder="Enter Name"
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="lasttN">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastN"
+        name="lastN"
+        placeholder="Enter last Name"
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="Gender">Gender(M or F)</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Gender"
+        name="Gender"
+        placeholder="Enter Gender"
+      />
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Register</button>
+  
+  </form>
+
+  <form action='/patient' method='POST'>
+    <input type="text" name='Name' placeholder="Name">
+    <button type="submit">Mandar</button>
+  </form>
+
+ <!--
+   <div>
+    <h2>Mostrar pacientes</h2>
+    <ul>
+      {% for patient in patients %}
+        <li>{{patients.Name}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+-->
+  {% endblock %}
